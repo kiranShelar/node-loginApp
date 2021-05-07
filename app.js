@@ -8,6 +8,7 @@ const router = require("./router")
 
 
 const app = express()
+const port = process.env.PORT || 3000
 
 const publicDir = path.join(__dirname,"/public")
 const partialDir = path.join(__dirname,"/views")
@@ -34,6 +35,8 @@ app.get("/",(req,res)=>{
 
 
 
-app.listen(3000,(req,res)=>{
-    console.log("Server running on port 3000");
+
+
+app.listen(port,(req,res)=>{
+    console.log("Server running on port "+port);
 })
